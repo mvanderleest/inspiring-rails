@@ -25,3 +25,8 @@ setBasePath("/shoelace-assets")
 import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
 
 console.info("Bridgetown is loaded!")
+
+// Alpine things!
+import Alpine from 'alpinejs'
+window.Alpine = Alpine
+Alpine.start()

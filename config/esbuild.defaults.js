@@ -98,7 +98,7 @@ const postCssPlugin = (options, configuration) => ({
         load: async filename => {
           let contents = await readCache(filename, "utf-8")
           const filedir = path.dirname(filename)
-          // We'll want to track any imports later when in watch mode:          
+          // We'll want to track any imports later when in watch mode:
           additionalFilePaths.push(filename)
 
           // We need to transform `url(...)` in imported CSS so the filepaths are properly
@@ -288,7 +288,7 @@ module.exports = (outputFolder, esbuildOptions) => {
     watch: process.argv.includes("--watch"),
     minify: process.argv.includes("--minify"),
     sourcemap: true,
-    target: "es2016",
+    target: "es2017",
     entryPoints: ["frontend/javascript/index.js"],
     entryNames: "[dir]/[name].[hash]",
     outdir: path.join(process.cwd(), `${outputFolder}/_bridgetown/static`),
